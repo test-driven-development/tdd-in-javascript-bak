@@ -1,0 +1,5 @@
+--reporter spec
+--growl
+--colors
+exercises/helper.js
+exercises/**/*.js

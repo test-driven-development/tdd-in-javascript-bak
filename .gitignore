@@ -1,18 +1,13 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
 # compiled output
-/contracts/pacts
-/dist
-/dist-server
 /tmp
 /out-tsc
-/contracts/logs
 /.webpack
 yarn-error.log
 package-lock.json
 archive/
 .nyc_output/
 /changelog.txt
+coverage/
 
 # dependencies
 /node_modules
@@ -29,16 +24,11 @@ archive/
 # misc
 /.sass-cache
 /connect.lock
-/coverage
 /libpeerconnection.log
 npm-debug.log
 testem.log
 /typings
 .nyc_output/
-
-# e2e
-/e2e/*.js
-/e2e/*.map
 
 # System Files
 .DS_Store

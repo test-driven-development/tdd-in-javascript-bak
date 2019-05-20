@@ -53,6 +53,7 @@
     "no-alert": [2],
     "no-array-constructor": [2],
     "no-bitwise": [0],
+    "no-buffer-constructor": [2],
     "no-caller": [2],
     "no-catch-shadow": [2],
     "no-cond-assign": [2],
