@@ -1,5 +1,12 @@
 {
   "nyc": {
-    "exclude": ["server/**/*spec.js"]
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "all": true,
+    "include": [
+      "exercises/**/*.js"
+    ],
+    "exclude": [
+      "exercises/**/*spec.js"
+    ]
   }
 }
