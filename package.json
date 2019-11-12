@@ -3,10 +3,6 @@
   "name": "tdd-in-javascript",
   "private": true,
   "version": "1.0.0",
-  "engines": {
-    "node": "8.10.0",
-    "npm": "5.6.0"
-  },
   "husky": {
     "hooks": {
       "pre-push": "npm run coverage:ci"
@@ -23,7 +19,6 @@
   },
   "dependencies": {
     "fs-promise": "2.0.3",
-
     "immutable": "4.0.0-rc.12",
     "immutable-ext": "1.1.5",
     "ramda": "0.26.1",
@@ -54,6 +49,7 @@
     "mochapack": "1.1.1",
     "npm-run-all": "4.1.5",
     "nyc": "14.1.1",
+    "prettier": "^1.19.1",
     "should": "13.2.3",
     "source-map-support": "0.5.12",
     "testdouble": "3.11.0",
