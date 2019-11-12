@@ -3430,29 +3430,6 @@ mocha@6.1.4:
     yargs-parser "13.0.0"
     yargs-unparser "1.5.0"
 
-mochapack@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/mochapack/-/mochapack-1.1.1.tgz#98d7f4bd4b7f32dfd4e3aed68d562f4c97fe38b1"
-  integrity sha512-t8WchR4+38f0BO7+nBcUexqe1NNhzr8vsylOp5wF/J1EWP47T76KRVnZIrHHjxXdnp5JJHZtUD8C0pkJG2iv0g==
-  dependencies:
-    babel-runtime "^6.18.0"
-    chalk "^2.3.0"
-    chokidar "^2.0.4"
-    glob-parent "^3.1.0"
-    globby "^7.1.1"
-    interpret "^1.0.1"
-    is-glob "^4.0.0"
-    loader-utils "^1.1.0"
-    lodash "^4.3.0"
-    memory-fs "^0.4.1"
-    nodent-runtime "^3.0.3"
-    normalize-path "^2.0.1"
-    progress "^2.0.0"
-    source-map-support "^0.5.0"
-    strip-ansi "^4.0.0"
-    toposort "^1.0.0"
-    yargs "^11.0.0"
-
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
