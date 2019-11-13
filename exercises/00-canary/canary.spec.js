@@ -3,4 +3,3 @@ describe('the canary spec', () => {
     true.should.be.true();
   });
 });
-
