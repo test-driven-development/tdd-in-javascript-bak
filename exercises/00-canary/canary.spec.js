@@ -1,5 +1,7 @@
 describe('the canary spec', () => {
-  it('shows the test infrastructure works', () => {
+  it('shows the test setup works', () => {
     true.should.be.true();
   });
 });
+
+
