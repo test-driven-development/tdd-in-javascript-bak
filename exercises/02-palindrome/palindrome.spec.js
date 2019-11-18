@@ -1,6 +1,7 @@
 const isPalindrome = phrase => {
   if (typeof phrase !== 'string' || phrase === '') throw new Error('invalid input');
-  return phrase === phrase.split('').reverse().join('');
+  const lowerCasePhrase = phrase.toLowerCase();
+  return lowerCasePhrase === lowerCasePhrase.split('').reverse().join('');
 };
 
 describe.only('palindrome should return', () => {
@@ -31,7 +32,10 @@ describe.only('palindrome should return', () => {
       isPalindrome('');
     }).should.throw('invalid input');
   });
-  it('true if  `Mom`');
+
+  it('true if  `Mom`', () => {
+    isPalindrome('Mom').should.be.true();
+  });
 });
 
 
