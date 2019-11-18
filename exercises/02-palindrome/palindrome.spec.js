@@ -2,17 +2,17 @@ const isPalindrome = () => {
   return true;
 };
 
-describe.only('palindrome should ', () => {
-  it('return true if `mom`', () => {
+describe.only('palindrome should return', () => {
+  it('true if `mom`', () => {
     isPalindrome('mom').should.be.true();
   });
 
-  it('return false if `the`');
-  it('return true if `mom mom`');
-  it('return false if `the mom`');
-  it('return error if not a string');
-  it('return error if empty string');
-  it('return true if  `Mom`');
+  it('false if `the`');
+  it('true if `mom mom`');
+  it('false if `the mom`');
+  it('error if not a string');
+  it('error if empty string');
+  it('true if  `Mom`');
 });
 
 
