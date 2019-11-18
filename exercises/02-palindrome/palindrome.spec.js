@@ -4,7 +4,7 @@ const isPalindrome = phrase => {
   return lowerCasePhrase === lowerCasePhrase.split('').reverse().join('');
 };
 
-describe.only('palindrome should return', () => {
+describe('palindrome should return', () => {
   it('true if `mom`', () => {
     isPalindrome('mom').should.be.true();
   });
