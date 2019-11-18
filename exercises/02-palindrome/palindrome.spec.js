@@ -1,9 +1,6 @@
-const isPalindrome = (phrase) => {
-  if (typeof phrase === 'string') {
-    return phrase === phrase.split('').reverse().join('');
-  } else {
-    throw new Error('invalid input');
-  }
+const isPalindrome = phrase => {
+  if (typeof phrase !== 'string') throw new Error('invalid input');
+  return phrase === phrase.split('').reverse().join('');
 };
 
 describe.only('palindrome should return', () => {
@@ -28,7 +25,7 @@ describe.only('palindrome should return', () => {
       isPalindrome(1);
     }).should.throw('invalid input');
   });
-  
+
   it('error if empty string');
   it('true if  `Mom`');
 });
