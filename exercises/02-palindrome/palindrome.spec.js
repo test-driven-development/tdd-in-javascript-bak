@@ -1,7 +1,4 @@
-const isPalindrome = (word) => {
-  const reversedWord = word.split('').reverse().join('');
-  return word === reversedWord;
-};
+const isPalindrome = (word) => word === word.split('').reverse().join('');
 
 describe.only('palindrome should return', () => {
   it('true if `mom`', () => {
