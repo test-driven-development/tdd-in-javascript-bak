@@ -1,6 +1,5 @@
 const isPalindrome = phrase => {
-  if (typeof phrase !== 'string') throw new Error('invalid input');
-  if (phrase === '') throw new Error('invalid input');
+  if (typeof phrase !== 'string' || phrase === '') throw new Error('invalid input');
   return phrase === phrase.split('').reverse().join('');
 };
 
