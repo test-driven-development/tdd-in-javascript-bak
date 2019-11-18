@@ -1,5 +1,6 @@
 const isPalindrome = phrase => {
   if (typeof phrase !== 'string') throw new Error('invalid input');
+  if (phrase === '') throw new Error('invalid input');
   return phrase === phrase.split('').reverse().join('');
 };
 
@@ -26,7 +27,11 @@ describe.only('palindrome should return', () => {
     }).should.throw('invalid input');
   });
 
-  it('error if empty string');
+  it('error if empty string', () => {
+    (() => {
+      isPalindrome('');
+    }).should.throw('invalid input');
+  });
   it('true if  `Mom`');
 });
 
