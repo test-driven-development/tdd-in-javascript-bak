@@ -23,7 +23,7 @@ describe.only('about stack', () => {
   });
 
   it('starts with stack size 0', () => {
-    stack.size().should.be.equal(0);
+    stack.size().should.equal(0);
   });
 
   it('is not empty when pushed', () => {
