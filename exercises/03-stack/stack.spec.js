@@ -3,7 +3,10 @@ const stackFactory = () => {
   const capacity = 1;
   const isEmpty = () => stackSize === 0;
   const size = () => stackSize;
-  const pop = () => stackSize--;
+  const pop = () => {
+    if (stackSize === 0) throw new Error('Stack Underflow');
+    stackSize--;
+  };
 
   const push = () => {
     if (capacity <= stackSize) throw new Error('Stack Overflow');
@@ -58,7 +61,10 @@ describe.only('about stack', () => {
     (() => stack.push(1)).should.throw('Stack Overflow');
   });
 
-  it('under-flows');
+  it('under-flows', () => {
+    (() => stack.pop()).should.throw('Stack Underflow');
+  });
+
   it('pops the same one pushed');
   it('pops the same two pushed');
   it('accepts only positive capacity');
