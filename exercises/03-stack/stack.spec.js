@@ -1,9 +1,14 @@
 const stackFactory = () => {
   let stackSize = 0;
+  const capacity = 1;
   const isEmpty = () => stackSize === 0;
   const size = () => stackSize;
   const pop = () => stackSize--;
-  const push = () => stackSize++;
+
+  const push = () => {
+    if (capacity <= stackSize) throw new Error('Stack Overflow');
+    stackSize++;
+  };
 
   return {
     isEmpty,
@@ -47,8 +52,12 @@ describe.only('about stack', () => {
     stack.pop();
     stack.size().should.equal(0);
   });
-  
-  it('overflows');
+
+  it('overflows', () => {
+    stack.push(1);
+    (() => stack.push(1)).should.throw('Stack Overflow');
+  });
+
   it('under-flows');
   it('pops the same one pushed');
   it('pops the same two pushed');
