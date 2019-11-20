@@ -1,20 +1,17 @@
 const stackFactory = () => {
-  let stackSize = 0;
-  let queue;
-  const capacity = 1;
-  const isEmpty = () => stackSize === 0;
-  const size = () => stackSize;
-  
+  let stack = [];
+  const capacity = 2;
+  const size = () => stack.length;
+  const isEmpty = () => size() === 0;
+
   const pop = () => {
-    if (stackSize === 0) throw new Error('Stack Underflow');
-    stackSize--;
-    return queue;
+    if (size() === 0) throw new Error('Stack Underflow');
+    return stack.pop();
   };
 
   const push = (element) => {
-    if (capacity <= stackSize) throw new Error('Stack Overflow');
-    queue = element;
-    stackSize++;
+    if (capacity <= size()) throw new Error('Stack Overflow');
+    stack.push(element);
   };
 
   return {
@@ -62,6 +59,7 @@ describe.only('about stack', () => {
 
   it('overflows', () => {
     stack.push(1);
+    stack.push(1);
     (() => stack.push(1)).should.throw('Stack Overflow');
   });
 
@@ -75,6 +73,14 @@ describe.only('about stack', () => {
     stack.pop().should.equal(expected);
   });
 
-  it('pops the same two pushed');
+  it('pops the same two pushed', () => {
+    const element1 = [], element2 = () => {
+    };
+    stack.push(element1);
+    stack.push(element2);
+    stack.pop().should.equal(element2);
+    stack.pop().should.equal(element1);
+  });
+
   it('accepts only positive capacity');
 });
