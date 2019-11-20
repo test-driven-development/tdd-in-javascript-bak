@@ -22,7 +22,7 @@ const stackFactory = (capacity = 2) => {
   };
 };
 
-describe.only('about stack', () => {
+describe('about stack', () => {
   let stack;
 
   beforeEach(() => (stack = stackFactory()));
@@ -74,8 +74,7 @@ describe.only('about stack', () => {
   });
 
   it('pops the same two pushed', () => {
-    const element1 = [], element2 = () => {
-    };
+    const element1 = [], element2 = () => {};
     stack.push(element1);
     stack.push(element2);
     stack.pop().should.equal(element2);
@@ -83,8 +82,6 @@ describe.only('about stack', () => {
   });
 
   it('accepts only positive capacity', () => {
-    (() =>
-        stackFactory(-1)
-    ).should.throw('Invalid capacity');
+    (() => stackFactory(-1)).should.throw('Invalid capacity');
   });
 });
