@@ -1,8 +1,17 @@
 const stackFactory = () => {
+  const isEmpty = () => {
+    return true;
+  };
+  const size = () => {
+    return 0;
+  };
+  const push = () => {
+    return null;
+  };
   return {
-    isEmpty: () => true,
-    size: () => 0,
-    push: () => null
+    isEmpty,
+    size,
+    push
   };
 };
 
