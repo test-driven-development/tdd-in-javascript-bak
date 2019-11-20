@@ -1,6 +1,6 @@
-const stackFactory = () => {
+const stackFactory = (capacity = 2) => {
+  if (capacity < 0) throw new Error('Invalid capacity');
   let stack = [];
-  const capacity = 2;
   const size = () => stack.length;
   const isEmpty = () => size() === 0;
 
@@ -82,5 +82,9 @@ describe.only('about stack', () => {
     stack.pop().should.equal(element1);
   });
 
-  it('accepts only positive capacity');
+  it('accepts only positive capacity', () => {
+    (() =>
+        stackFactory(-1)
+    ).should.throw('Invalid capacity');
+  });
 });
