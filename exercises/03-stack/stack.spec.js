@@ -2,7 +2,7 @@ const stackFactory = () => {
   let stackSize = 0;
   const isEmpty = () => stackSize === 0;
   const size = () => stackSize;
-  
+
   const push = () => {
     stackSize++;
     return null;
@@ -15,9 +15,11 @@ const stackFactory = () => {
   };
 };
 
-let stack = stackFactory();
-
 describe.only('about stack', () => {
+  let stack;
+
+  beforeEach(() => (stack = stackFactory()));
+
   it('starts empty', () => {
     stack.isEmpty().should.be.true();
   });
@@ -31,7 +33,11 @@ describe.only('about stack', () => {
     stack.isEmpty().should.be.false();
   });
 
-  it('size is 1 when pushed to empty stack');
+  it('size is 1 when pushed to empty stack', () => {
+    stack.push(1);
+    stack.size().should.equal(1);
+  });
+
   it('leaves stack empty when pushed and popped');
   it('leaves stack size 0 when pushed and popped');
   it('overflows');
