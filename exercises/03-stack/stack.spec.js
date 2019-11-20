@@ -1,15 +1,13 @@
 const stackFactory = () => {
   let stackSize = 0;
-  const isEmpty = () => {
-    return stackSize === 0;
-  };
-  const size = () => {
-    return stackSize;
-  };
+  const isEmpty = () => stackSize === 0;
+  const size = () => stackSize;
+  
   const push = () => {
-    stackSize++
+    stackSize++;
     return null;
   };
+
   return {
     isEmpty,
     size,
