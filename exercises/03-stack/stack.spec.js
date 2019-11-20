@@ -1,7 +1,12 @@
-let stack = {
-  isEmpty: () => true,
-  size: () => 0
+const stackFactory = () => {
+  return {
+    isEmpty: () => true,
+    size: () => 0,
+    push: () => null
+  };
 };
+
+let stack = stackFactory();
 
 describe.only('about stack', () => {
   it('starts empty', () => {
@@ -12,7 +17,11 @@ describe.only('about stack', () => {
     stack.size().should.be.equal(0);
   });
 
-  it('is not empty when pushed');
+  xit('is not empty when pushed', () => {
+    stack.push(1);
+    stack.isEmpty().should.be.false();
+  });
+
   it('size is 1 when pushed to empty stack');
   it('leaves stack empty when pushed and popped');
   it('leaves stack size 0 when pushed and popped');
