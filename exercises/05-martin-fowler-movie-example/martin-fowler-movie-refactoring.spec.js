@@ -40,17 +40,17 @@ describe('martin fowler\'s movie refactoring example', () => {
 
   it('is protected from regressions', () => {
     let expected = 'Rental Record for Dummy Customer, Jr.\n' +
-        '\tChildrens1\t1.5\n' +
-        '\tChildrens2\t1.5\n' +
-        '\tChildrens3\t1.5\n' +
-        '\tRegular1\t2\n' +
-        '\tRegular2\t2\n' +
-        '\tRegular3\t3.5\n' +
-        '\tNew Release1\t3\n' +
-        '\tNew Release2\t6\n' +
-        '\tNew Release3\t9\n' +
-        'Amount owed is 30\n' +
-        'You earned 11 frequent renter points';
+      '\tChildrens1\t1.5\n' +
+      '\tChildrens2\t1.5\n' +
+      '\tChildrens3\t1.5\n' +
+      '\tRegular1\t2\n' +
+      '\tRegular2\t2\n' +
+      '\tRegular3\t3.5\n' +
+      '\tNew Release1\t3\n' +
+      '\tNew Release2\t6\n' +
+      '\tNew Release3\t9\n' +
+      'Amount owed is 30\n' +
+      'You earned 11 frequent renter points';
 
     customer.addRental(makeRentalFrom(childrens1, DAYS_RENTED_IS_1));
     customer.addRental(makeRentalFrom(childrens2, DAYS_RENTED_IS_2));
